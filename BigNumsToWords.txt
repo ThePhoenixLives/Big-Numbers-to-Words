@@ -1,0 +1,233 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+
+
+int main() {
+	
+	int num, clone, cleaner, clear, subtractor, exit=0;
+	string ans;
+	
+	while(exit<1){
+	cout<<"Please enter a number 1-99999"<<endl;
+	cin>>num;
+	
+	
+	
+	if (num>=1 && num<999999){
+	
+	
+	cleaner=num;
+	clone=num;
+	clear=1;
+	
+	
+	while (clear<10){
+	
+	subtractor=clone;
+	
+	if (clone>=100000){
+           clone/=100000;
+           
+           if(clone==1){
+             cout<<"One hundred ";
+         } else  if(clone==2){
+             cout<<"Two hundred ";
+         } else  if(clone==3){
+             cout<<"Three hundred ";
+         } else  if(clone==4){
+             cout<<"Four hundred ";
+         } else  if(clone==5){
+             cout<<"Five hundred ";
+         } else  if(clone==6){
+             cout<<"Six hundred ";
+         } else  if(clone==7){
+             cout<<"Seven hundred ";
+         } else  if(clone==8){
+             cout<<"Eight hundred ";
+         } else  if(clone==9){
+             cout<<"Nine hundred ";
+         } else  {}
+         
+           clone*=100000;
+     } else if (clone>=20000){
+          clone/=10000;
+          
+          if(clone==2){
+             cout<<"twenty ";
+         } else  if(clone==3){
+             cout<<"thirty ";
+         } else  if(clone==4){
+             cout<<"fourty ";
+         } else  if(clone==5){
+             cout<<"fifty ";
+         } else  if(clone==6){
+             cout<<"sixty ";
+         } else  if(clone==7){
+             cout<<"seventy ";
+         } else  if(clone==8){
+             cout<<"eighty ";
+         } else  if(clone==9){
+             cout<<"ninety ";
+         } else  {}
+         
+          clone*=10000;
+     } else if (clone>=1000){
+         clone/=1000;
+        if(clone==1){
+             cout<<"one thousand ";
+         } else  if(clone==2){
+             cout<<"two thousand ";
+         } else  if(clone==3){
+             cout<<"three thousand ";
+         } else  if(clone==4){
+             cout<<"four thousand ";
+         } else  if(clone==5){
+             cout<<"five thousand ";
+         } else  if(clone==6){
+             cout<<"six thousand ";
+         } else  if(clone==7){
+             cout<<"seven thousand ";
+         } else  if(clone==8){
+             cout<<"eight thousand ";
+         } else  if(clone==9){
+             cout<<"nine thousand ";
+         } else  if (clone==10){
+             cout<<"ten thousand ";
+         } else  if (clone==11){
+             cout<<"eleven thousand ";
+         } else  if (clone==12){
+             cout<<"twelve thousand ";
+         } else  if (clone==13){
+             cout<<"thirteen thousand ";
+         } else  if (clone==14){
+             cout<<"fourteen thousand ";
+         } else  if (clone==15){
+             cout<<"fifteen thousand ";
+         } else  if (clone==16){
+             cout<<"sixteen thousand ";
+         } else  if (clone==17){
+             cout<<"seventeen thousand ";
+         } else  if (clone==18){
+             cout<<"eighteen thousand ";
+         } else  if (clone==19){
+             cout<<"nineteen thousand ";
+         } else {}
+         
+        clone*=1000;
+     } else if (clone>=100){
+         clone/=100;
+                 if(clone==1){
+             cout<<"one hundred ";
+         } else  if(clone==2){
+             cout<<"two hundred ";
+         } else  if(clone==3){
+             cout<<"three hundred ";
+         } else  if(clone==4){
+             cout<<"four hundred ";
+         } else  if(clone==5){
+             cout<<"five hundred ";
+         } else  if(clone==6){
+             cout<<"six hundred ";
+         } else  if(clone==7){
+             cout<<"seven hundred ";
+         } else  if(clone==8){
+             cout<<"eight hundred ";
+         } else  if(clone==9){
+             cout<<"nine hundred ";
+         } else  {}
+         
+         clone*=100;
+     } else if (clone>=20){
+         clone/=10;
+         
+     if(clone==2){
+             cout<<"twenty ";
+         } else  if(clone==3){
+             cout<<"thirty ";
+         } else  if(clone==4){
+             cout<<"fourty ";
+         } else  if(clone==5){
+             cout<<"fifty ";
+         } else  if(clone==6){
+             cout<<"sixty ";
+         } else  if(clone==7){
+             cout<<"seventy ";
+         } else  if(clone==8){
+             cout<<"eighty ";
+         } else  if(clone==9){
+             cout<<"ninety ";
+         } else  {}
+         
+	 clone*=10;   
+     } else {
+     	cout<<"and ";
+	 if(clone==1){
+             cout<<"one"<<endl;
+         } else if(clone==2){
+             cout<<"two"<<endl;
+         } else if(clone==3){
+             cout<<"three"<<endl;
+         } else if(clone==4){
+             cout<<"four"<<endl;
+         } else if(clone==5){
+             cout<<"five"<<endl;
+         } else if(clone==6){
+             cout<<"six"<<endl;
+         } else if(clone==7){
+             cout<<"seven"<<endl;
+         } else if(clone==8){
+             cout<<"eight"<<endl;
+         } else if(clone==9){
+             cout<<"nine"<<endl;
+         } else if(clone==10){
+             cout<<"ten"<<endl;
+         } else if(clone==11){
+             cout<<"eleven"<<endl;
+         } else if(clone==12){
+             cout<<"twelve"<<endl;
+         } else if(clone==13){
+             cout<<"thirteen"<<endl;
+         } else if(clone==14){
+             cout<<"fourteen"<<endl;
+         } else if(clone==15){
+             cout<<"fifteen"<<endl;
+         } else if(clone==16){
+             cout<<"sixteen"<<endl;
+         } else if(clone==17){
+             cout<<"seventeen"<<endl;
+         } else if(clone==18){
+             cout<<"eighteen"<<endl;
+         } else if(clone==19){
+             cout<<"nineteen"<<endl;
+         } else {
+		 cout<<"	"<<endl;
+		 }
+         clear=10;
+         break;
+	 }
+	 cleaner=clone;
+	 clone=subtractor;
+	 clone=clone-cleaner;
+	 //cout<<clone<<endl;
+
+ }
+ 
+ cout<<"Would you like to try another? Y/N"<<endl;
+ cin>>ans;
+ 
+ if (ans=="Y" || ans=="y" || ans=="yes" || ans=="Yes" || ans=="YES") {
+ 
+ } else {
+ exit=1;
+ }
+ 
+ 
+ } else {
+ 	
+ 	cout<<"Please enter an input within supported range."<<endl;
+ }
+}
+}
